@@ -58,12 +58,51 @@ public class DialogManager : MonoBehaviour
             clearAll();
             ObjectManager.selectedObject = null;
             string evet = ObjectManager.eventUsed;
+            Debug.Log(evet);
             if (evet == "BED")
                 return;
 
             ObjectManager.eventUsed = "NOTHING";
+            if (evet == "CREANCIER")
+            {
+                if (CreancierManager.hasSolutionBeenChosen)
+                {
+                    GameObject.Find("GameHandler").GetComponent<GameHandler>().endTheGame();
+                    return;
+                }
+                GameObject.Find("MultipleEventManager").GetComponent<CreancierManager>().goToMCQ();
+                return;
+            }
+
+            if (evet == "POLICE")
+            {
+                if (PoliceManager.hasSolutionBeenChosen)
+                {
+                    GameObject.Find("GameHandler").GetComponent<GameHandler>().endTheGame();
+                    return;
+                }
+
+                GameObject.Find("MultipleEventManager").GetComponent<PoliceManager>().goToMCQ();
+                return;
+            }
+
+            if (evet == "DEVILAST")
+            {
+                if (DevilLastWords.hasSolutionBeenChosen)
+                {
+                    GameObject.Find("GameHandler").GetComponent<GameHandler>().endTheGame();
+                    return;
+                }
+
+                GameObject.Find("MultipleEventManager").GetComponent<DevilLastWords>().launchSecondDialog();
+                return;
+            }
+
             if (shouldRemoveOne)
+            {
                 GameHandler.wishesLeft -= 1;
+                shouldRemoveOne = false;
+            }
             if (evet == "DEVIL") {
                 GameObject.Find("SceneManager").GetComponent<AudioManager>().fadeToMain();
                 if (GameObject.Find("MultipleEventManager").GetComponent<DevilEventManager>().hasTextAfterDevil)

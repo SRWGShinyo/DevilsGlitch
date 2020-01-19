@@ -22,7 +22,12 @@ public class PCManager : ObjectManager
         else
         {
             eventUsed = "POKER";
-            createSimpleMessage(0);
+            if (scm.hasTreeStarted && scm.hasGlitched)
+                createSimpleMessage(1);
+            else if (scm.hasTreeStarted && !scm.hasGlitched)
+                createSimpleMessage(0);
+            else
+                createSimpleMessage(0);
         }
     }
 
@@ -30,14 +35,26 @@ public class PCManager : ObjectManager
     {
         dmg.clearAll();
         scm.isPCSwitchOn = false;
-        createSimpleMessage(1);
+
+        if (scm.hasTreeStarted && scm.hasGlitched)
+            createSimpleMessage(2);
+        else if (scm.hasTreeStarted && !scm.hasGlitched)
+            createSimpleMessage(3);
+        else
+            createSimpleMessage(1);
+
         eventUsed = "MAIL";
     }
 
     public override void OnOptionTwoSelected()
     {
         dmg.clearAll();
-        createSimpleMessage(0);
+        if (scm.hasTreeStarted && scm.hasGlitched)
+            createSimpleMessage(1);
+        else if (scm.hasTreeStarted && !scm.hasGlitched)
+            createSimpleMessage(0);
+        else
+            createSimpleMessage(0);
         eventUsed = "POKER";
     }
 
@@ -46,6 +63,5 @@ public class PCManager : ObjectManager
         dmg.clearAll();
         selectedObject = null;
         eventUsed = "NOTHING";
-        //Leave
     }
 }

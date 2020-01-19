@@ -11,6 +11,7 @@ public class SceneManagementScript : MonoBehaviour
     public bool isTelephoneRinging = false;
 
     public bool hasGlitched = false;
+    public bool hasTreeStarted = false;
 
     // Start is called before the first frame update
     void Start()

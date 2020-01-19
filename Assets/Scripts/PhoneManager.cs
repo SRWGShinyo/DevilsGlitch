@@ -33,7 +33,12 @@ public class PhoneManager : ObjectManager
         eventUsed = "PHONE";
         scm.isTelephoneRinging = false;
         phoneAnim.GetComponent<SpriteRenderer>().enabled = true;
-        createSimpleMessage(1);
+        if (scm.hasTreeStarted && scm.hasGlitched)
+            createSimpleMessage(3);
+        else if (scm.hasTreeStarted && !scm.hasGlitched)
+            createSimpleMessage(1);
+        else
+            createSimpleMessage(1);
     }
 
     public override void OnOptionTwoSelected()

@@ -67,7 +67,9 @@
     <Compile Include="Assets\Scripts\BedManager.cs" />
     <Compile Include="Assets\Scripts\BubbleAppear.cs" />
     <Compile Include="Assets\Scripts\ClicOnFull.cs" />
+    <Compile Include="Assets\Scripts\CreancierManager.cs" />
     <Compile Include="Assets\Scripts\DevilEventManager.cs" />
+    <Compile Include="Assets\Scripts\DevilLastWords.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
     <Compile Include="Assets\Scripts\ExitManager.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
@@ -75,12 +77,14 @@
     <Compile Include="Assets\Scripts\HeartDisplayer.cs" />
     <Compile Include="Assets\Scripts\IdleManager.cs" />
     <Compile Include="Assets\Scripts\KitchenManager.cs" />
+    <Compile Include="Assets\Scripts\LastSceneWork.cs" />
     <Compile Include="Assets\Scripts\MailAppear.cs" />
     <Compile Include="Assets\Scripts\ObjectManager.cs" />
     <Compile Include="Assets\Scripts\PanelHandling.cs" />
     <Compile Include="Assets\Scripts\PCHandlerAnim.cs" />
     <Compile Include="Assets\Scripts\PCManager.cs" />
     <Compile Include="Assets\Scripts\PhoneManager.cs" />
+    <Compile Include="Assets\Scripts\PoliceManager.cs" />
     <Compile Include="Assets\Scripts\SceneManagementScript.cs" />
     <Compile Include="Assets\Scripts\TextSelection.cs" />
     <Compile Include="Assets\Scripts\UnappearhenNoevent.cs" />

@@ -5,11 +5,12 @@ using UnityEngine;
 public class GlobalEventMan : ObjectManager
 {
     public bool shouldPlayOnTheGo = true;
-    public int indexInCourse = 0;
+    static public int indexInCourse = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        indexInCourse = 0;
         scm = GameObject.Find("SceneManager").GetComponent<SceneManagementScript>();
         dmg = GameObject.Find("SceneManager").GetComponent<DialogManager>();
         pnH = GameObject.Find("Fondu").GetComponent<PanelHandling>();

@@ -50,6 +50,14 @@ public class BedManager : ObjectManager
         dmg.proceed();
         pnH.fadeIn();
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(sceneToLoad);
+        if (SceneManager.GetActiveScene().name != "Day5")
+            SceneManager.LoadScene(sceneToLoad);
+        else
+        {
+            if (GameHandler.wishesLeft == 3)
+                SceneManager.LoadScene(5);
+            else
+                SceneManager.LoadScene(6);
+        }
     }
 }

@@ -1221,6 +1221,8 @@ MonoBehaviour:
   adm: {fileID: 0}
   dmg: {fileID: 0}
   onHover: 'Jack: I need to do something with my life. Sometimes.'
+  pcBecGlitch: 0
+  phoneBecGlitch: 0
   shouldPhoneRingAfter: 1
   shouldPCMailAfter: 1
   shouldSpeakAfterDay: 1
@@ -1376,7 +1378,7 @@ MonoBehaviour:
   dmg: {fileID: 0}
   onHover: 'Jack: My Bed...not comfy, not good.'
   notToBed: 
-  sceneToLoad: 1
+  sceneToLoad: 3
 --- !u!1 &762087666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3262,6 @@ MonoBehaviour:
   dmg: {fileID: 0}
   onHover: 
   shouldPlayOnTheGo: 0
-  indexInCourse: 0
 --- !u!4 &1748179706
 Transform:
   m_ObjectHideFlags: 0
@@ -3936,6 +3937,7 @@ MonoBehaviour:
   isPCSwitchOn: 0
   isTelephoneRinging: 0
   hasGlitched: 0
+  hasTreeStarted: 0
 --- !u!114 &2097421753
 MonoBehaviour:
   m_ObjectHideFlags: 0
